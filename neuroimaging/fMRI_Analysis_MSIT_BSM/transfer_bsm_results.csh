@@ -4,9 +4,7 @@ setenv out_dir /projects/msit
 setenv subs_dir /projects/msit/subjs
 setenv params_dir /projects/msit/bsm_params
 
-#set subjects_list = ($params_dir/subjects.txt)
-set subjects_list = (hc009 hc018 hc016 hc019 hc021 hc028 hc031 hc036 pp004 pp006 pp007 pp012 pp015)
-
+set subjects_list = ()
 
 foreach subjs (`cat $subjects_list`)
 	cd $subs_dir/${subjs}/msit_bsm/results;

@@ -1,0 +1,31 @@
+# =============================================================================
+# fMRI_Analysis_MSIT_BSM — dependency manifest
+# =============================================================================
+# This pipeline is C shell + AFNI + FSL + MATLAB/SPM + FreeSurfer/SUMA.
+# There are no pip-installable Python packages for the core workflow.
+# Use this file as a checklist; install each tool from its official docs.
+#
+# Install order (recommended) — see README Quickstart for details:
+# -----------------------------------------------------------------------------
+# 1. FreeSurfer   — anatomical recon; license required; SetUpFreeSurfer.sh
+# 2. FSL          — FAST segmentation in anat step; FSLDIR + fsl.sh in shell
+# 3. AFNI         — preprocessing + BSM (3dDeconvolve, 3dLSS, etc.); full PATH
+# 4. MATLAB       — R2020a+ typically fine; must run SPM8 jobs from .csh drivers
+# 5. SPM8         — add to MATLAB path; edit addpath in *.m (defaults: /spm/spm8)
+# 6. tcsh/csh     — Linux: e.g. apt install tcsh; scripts are #! /bin/csh
+#
+# Optional / verify after install:
+# -----------------------------------------------------------------------------
+# - SUMA          — used with FreeSurfer→AFNI conversion (often via AFNI+FS setup)
+# - @afni_R_package_install — if AFNI R-based helpers are needed
+#
+# Official references (URLs):
+# -----------------------------------------------------------------------------
+# https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall
+# https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation
+# https://afni.nimh.nih.gov/pub/dist/doc/htmldata/background_install/main_toc.html
+# https://www.fil.ion.ucl.ac.uk/spm/software/spm8/
+#
+# =============================================================================
+# (No Python packages listed — pip install -r requirements.txt is a no-op.)
+# =============================================================================
